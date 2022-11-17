@@ -2,20 +2,17 @@
 
 # Table of Contents
 
-[Background of Analysis
-[2](#background-of-analysis)](#background-of-analysis)
+[Background of Analysis](#background-of-analysis)
 
-[Executive Summary [2](#executive-summary)](#executive-summary)
+[Executive Summary](#executive-summary)
 
-[Exploratory Data Analysis
-[2](#exploratory-data-analysis)](#exploratory-data-analysis)
+[Exploratory Data Analysis](#exploratory-data-analysis)
 
-[Predictive Models [7](#predictive-models)](#predictive-models)
+[Predictive Models](#predictive-models)
 
-[K-means Clustering [14](#k-means-clustering)](#k-means-clustering)
+[K-means Clustering](#k-means-clustering)
 
-[Prescriptive Recommendations
-[15](#prescriptive-recommendations)](#prescriptive-recommendations)
+[Prescriptive Recommendations](#prescriptive-recommendations)
 
 # Background of Analysis
 
@@ -148,10 +145,7 @@ confidence](./images/media/image10.png)
 automatically generated](./images/media/image12.png)
 
 ![Graphical user interface, text, application Description automatically
-generated](./images/media/image13.png)
-
-![Text Description automatically
-generated](./images/media/image14.png)
+generated](./images/media/image13.png) ![Text Description automatically generated](./images/media/image14.png)
 
 **Correlation Matrix:**
 
@@ -202,20 +196,15 @@ The following table summarizes the results obtained with the 5 models
 created for this dataset, the model with the best Accuracy was Gradient
 Boosted Tree.
 
-  ------------------------------------------------------------------------
-  **Model**                  **Accuracy**           **Test Area Under
-                                                    ROC**
-  -------------------------- ---------------------- ----------------------
-  Logistic Regression        0.9149                 0.9359
 
-  Decision Tree              0.9159                 0.5439
 
-  Random Forest              0.9056                 0.9158
-
-  Gradient Boosted Tree      0.9187                 0.9428
-
-  Support Vector Classifier  0.9024                 0.9279
-  ------------------------------------------------------------------------
+|         **Model**         | **Accuracy** | **Test Area Under ROC** | 
+|:------------------------: |:------------:|:-----------------------:|
+| Logistic Regression       | 0.9149       | 0.9359                  |
+| Decision Tree             | 0.9159       | 0.5439                  |
+| Random Forest Classifier  | 0.9056       | 0.9158                  | 
+| Gradient Boosted Tree     | 0.9187       | 0.9428                  | 
+| Support Vector Classifier | 0.9024       | 0.9279                  | 
 
 The first model to explore is **Logistic Regression**, the following
 images show the resulting confusion matrix and ROC Curve.
@@ -278,20 +267,14 @@ previous models here as well.
 
 ![](./images/media/image32.png)
 
-  -----------------------------------------------------------------------
-  **Model**               **Accuracy**            **ROC-AUC**
-  ----------------------- ----------------------- -----------------------
-  Logistic Regression     0.915                   0.933
 
-  Decision Tree           0.916                   0.544
-
-  Random Forest           0.906                   0.915
-
-  Gradient boosted trees  0.919                   0.943
-
-  Support Vector          0.902                   0.928
-  Classifier                                      
-  -----------------------------------------------------------------------
+|         **Model**         | **Accuracy** |**Test Area Under ROC**| 
+|:------------------------: |:------------:|:---------------------:|
+| Logistic Regression       | 0.915       | 0.936                  |
+| Decision Tree             | 0.916       | 0.544                  |
+| Random Forest Classifier  | 0.906       | 0.916                  | 
+| Gradient Boosted Tree     | 0.919       | 0.943                  | 
+| Support Vector Classifier | 0.902       | 0.928                  | 
 
 Best model was found to be gradient boosted trees with highest accuracy
 and ROC_AUC value.
@@ -301,13 +284,13 @@ and ROC_AUC value.
 For the KMeans analysis we set 2 clusters, this is a required parameter
 for this library.
 ```
-> \# Trains a k-means model.
+> # Trains a k-means model.
 >
 > kmeans = KMeans().setK(2).setSeed(1)
 >
 > model_km = kmeans.fit(scaler_df.select(\'features\'))
 >
-> \# Make predictions
+> # Make predictions
 >
 > predictions_km = model_km.transform(scaler_df)
 ```
